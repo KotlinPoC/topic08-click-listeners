@@ -17,14 +17,19 @@
 {
 
 	// get a handle on the button object
-	bt = (Button) findViewById(R.id.button);
+	val bt: Button =  findViewById(R.id.button) as Button
 	// set the text on the button object
-	bt.setText("BUTTON");
+	bt.text  = "Press Me"
 
 	// separate declaration of new OnClickListener
-	bt.setOnClickListener(usingContext);
+	// bt.setOnClickListener(usingContext);
+	bt.setOnClickListener(object:View.OnClickListener {
+  		  override fun onClick(v: View?) {
+        // react to event goes here
+    }
+})
 }
-// code  interface as a type
+// code  interface as a type not used see other
 private OnClickListener usingContext = 	new OnClickListener() {
 	public void onClick(View v) {
 		// react to event code goes here
